@@ -1,0 +1,32 @@
+{
+	"auto_upgrade_last_run": null,
+	"installed_packages":
+	[
+		"All Autocomplete",
+		"Backbone.js",
+		"Bootstrap 3 Snippets",
+		"DocBlockr",
+		"Git",
+		"GitHub Flavored Markdown Preview",
+		"Github Tools",
+		"Goto Documentation",
+		"Package Control",
+		"PHP Namespace Command",
+		"Phpcs",
+		"PHPUnit",
+		"PHPUnit Completions",
+		"Pretty JSON",
+		"Puppet",
+		"Shell Turtlestein",
+		"SideBarGit",
+		"SublimeLinter",
+		"Tag",
+		"Terminal",
+		"TernJS",
+		"Titanium API Document",
+		"Titanium Build",
+		"Twig",
+		"Underscore.js Snippets",
+		"xml-guesser"
+	]
+}

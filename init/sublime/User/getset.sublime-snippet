@@ -1,0 +1,32 @@
+<snippet>
+    <content><![CDATA[/**
+ * Getter for ${1:$SELECTION}
+ *
+ * @return mixed
+ */
+public function get${1/(?:^|_)(\w)/\U$1$2/g$1}()
+{
+    return \$this->$1;
+}
+
+/**
+ * Setter for $1
+ *
+ * @param mixed \$${1/_(\w)/\U$1/g$1} Value to set
+ *
+ * @return self
+ */
+public function set${1/(?:^|_)(\w)/\U$1$2/g$1}(\$${1/_(\w)/\U$1/g$1})
+{
+    \$this->$1 = \$${1/_(\w)/\U$1/g$1};
+    return \$this;
+}
+
+]]></content>
+    <!-- Optional: Tab trigger to activate the snippet -->
+    <tabTrigger>gs</tabTrigger>
+    <!-- Optional: Scope the tab trigger will be active in -->
+    <scope>source.php</scope>
+    <!-- Optional: Description to show in the menu -->
+    <description>Create getter and setter methods</description>
+</snippet>
