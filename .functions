@@ -18,7 +18,12 @@ function calc() {
 
 # Create a new directory and enter it
 function mkd() {
-	mkdir -p "$@" && cd "$@"
+	mkp "$@" && cd "$@"
+}
+
+# Create a new directory and its parents
+function mkp() {
+	mkdir -p "$@"
 }
 
 # Change working directory to the top-most Finder window location
