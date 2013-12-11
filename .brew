@@ -73,5 +73,17 @@ installcask ukelele
 installcask virtualbox
 installcask vlc
 
+# Quick Look
+installcask qlcolorcode
+installcask qlstephen
+installcask qlmarkdown
+installcask quicklook-json
+installcask qlprettypatch
+installcask quicklook-csv
+installcask betterzipql
+installcask webp-quicklook
+installcask suspicious-package
+qlmanage -r
+
 # Remove outdated versions from the cellar
 brew cleanup
