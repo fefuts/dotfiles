@@ -48,3 +48,5 @@ export PATH=/opt/boxen/nvm/v0.8.8/bin/:$PATH
 if [ -f $(brew --prefix)/etc/bash_completion ]; then
 . $(brew --prefix)/etc/bash_completion
 fi
+
+[[ -s `brew --prefix`/etc/autojump.sh ]] && . `brew --prefix`/etc/autojump.sh
