@@ -16,6 +16,11 @@ function calc() {
 	printf "\n"
 }
 
+growl() {
+	echo -e $'\e]9;'${1}'\007';
+	return;
+}
+
 # Create a new directory and enter it
 function mkd() {
 	mkp "$@" && cd "$@"
