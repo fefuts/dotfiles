@@ -4,7 +4,7 @@ config_dir=~/.apps/iterm
 config_file='com.googlecode.iterm2.plist'
 
 if [ -d "$config_dir" ]; then
-    cp -f $config_dir/$config_file $dir/ && echo "'$dir/$config_file' copied to '$config_dir'"
+    cp -f $config_dir/$config_file $dir/ && echo "'$config_dir/$config_file' copied to '$dir'"
 else
     echo "iTerm2 config dir '$config_dir' does not exists"
     echo "To setup config dir, go to iTerm2->Preferences, \
