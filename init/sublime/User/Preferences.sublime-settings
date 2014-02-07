@@ -3,7 +3,8 @@
 	"ignored_packages":
 	[
 		"Vintage",
-		"Phpcs"
+		"Phpcs",
+		"FTPSync"
 	],
 	"show_full_path": true
 }
