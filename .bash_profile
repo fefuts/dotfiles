@@ -56,3 +56,5 @@ if [ -f $(brew --prefix)/etc/bash_completion ]; then
 fi
 
 [[ -s `brew --prefix`/etc/autojump.sh ]] && . `brew --prefix`/etc/autojump.sh
+
+[ -f ~/bin/bashmarks.sh ] && source ~/bin/bashmarks.sh
