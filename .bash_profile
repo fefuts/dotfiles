@@ -57,4 +57,4 @@ fi
 
 [[ -s `brew --prefix`/etc/autojump.sh ]] && . `brew --prefix`/etc/autojump.sh
 
-[ -f ~/bin/bashmarks.sh ] && source ~/bin/bashmarks.sh
+[ -f ~/bin/bashmarks/bashmarks.sh ] && source ~/bin/bashmarks/bashmarks.sh
