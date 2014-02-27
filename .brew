@@ -51,7 +51,8 @@ brew tap homebrew/versions
 brew install lua52
 brew install sshuttle
 brew install autojump
-brew install tor
+#brew install tor
+brew install q
 
 # Install native apps
 brew tap phinze/homebrew-cask
