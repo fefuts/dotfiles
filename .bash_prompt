@@ -51,5 +51,36 @@ function parse_git_branch() {
 	git branch --no-color 2> /dev/null | sed -e '/^[^*]/d' -e "s/* \(.*\)/\1$(parse_git_dirty)/"
 }
 
-export PS1="\[${BOLD}${MAGENTA}\]\u \[$WHITE\]at \[$ORANGE\]\h \[$WHITE\]in \[$GREEN\]\w\[$WHITE\]\$([[ -n \$(git branch 2> /dev/null) ]] && echo \" on \")\[$PURPLE\]\$(parse_git_branch)\[$WHITE\]\n\$ \[$RESET\]"
+# Titanium prompt
+function find-up() {
+  local path=$(pwd)
+  while [[ "$path" != "" && ! -e "$path/$1" ]]; do
+    path=${path%/*}
+  done
+  if [ "$path" != "" ]
+  	then
+  	echo "$path"
+  fi
+}
+
+function parse_alloy_version() {
+	local version=$(alloy --version 2> /dev/null)
+	if [ ! -z "$version" ]; then
+		echo -n "‡"
+		echo -en "\\033[0;36m$version\\033[0;0m"
+	fi
+}
+
+function parse_titanium_version() {
+	local tiapp=`find-up tiapp.xml`
+	if [ -z "$tiapp" ]; then return; fi
+	local tiversion=$(cat $tiapp/tiapp.xml 2> /dev/null | sed -n 's/<sdk-version>\(.*\)<\/sdk-version>/\1/p' | tr -d ' \t\n\r\f')
+	local appversion=$(cat $tiapp/tiapp.xml 2> /dev/null | sed -n 's/<version>\(.*\)<\/version>/\1/p' | tr -d ' \t\n\r\f')
+	if [ -z "$tiversion" ]; then return; fi
+	echo -en " \\033[2;36mTi $tiversion\\033[0;0m App ${appversion}"
+	#parse_alloy_version
+	#echo -n ")"
+}
+
+export PS1="\[${BOLD}${MAGENTA}\]\u \[$WHITE\]at \[$ORANGE\]\h \[$WHITE\]in \[$GREEN\]\w\[$WHITE\]\$([[ -n \$(git branch 2> /dev/null) ]] && echo \" on \")\[$PURPLE\]\$(parse_git_branch)\[$WHITE\]\$(parse_titanium_version)\n\$ \[$RESET\]"
 export PS2="\[$ORANGE\]→ \[$RESET\]"
