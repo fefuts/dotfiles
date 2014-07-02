@@ -41,7 +41,11 @@ install bfg
 #install exiv2
 install foremost
 install git
+install git-flow
+install sshuttle
+install autojump
 install hashpump
+install q
 install imagemagick --with-webp
 install lynx
 install nmap
@@ -50,7 +54,6 @@ install p7zip
 install pigz
 install pv
 install rename
-install rhino
 install sqlmap
 install tree
 install ucspi-tcp # `tcpserver` et al.
