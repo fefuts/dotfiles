@@ -60,6 +60,10 @@ install ucspi-tcp # `tcpserver` et al.
 install webkit2png
 install xpdf
 install zopfli
+install autoenv
+
+# Replace sed with gnu-sed
+install --default-names gnu-sed
 
 install homebrew/versions/lua52
 
