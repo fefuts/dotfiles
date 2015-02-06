@@ -45,6 +45,7 @@ install git-flow
 install sshuttle
 install autojump
 install hashpump
+install hh
 install q
 install imagemagick --with-webp
 install lynx
