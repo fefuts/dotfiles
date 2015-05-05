@@ -23,7 +23,6 @@ growl() {
 
 # Create a new directory and enter it
 function mkd() {
-<<<<<<< HEAD
 	mkdir -p "$@" && cd "$_";
 }
 
