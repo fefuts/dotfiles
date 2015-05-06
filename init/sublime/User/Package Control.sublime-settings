@@ -1,17 +1,22 @@
 {
 	"auto_upgrade_last_run": null,
+	"in_process_packages":
+	[
+	],
 	"installed_packages":
 	[
 		"All Autocomplete",
 		"Backbone.js",
 		"Bootstrap 3 Snippets",
+		"DashDoc",
 		"DocBlockr",
 		"FTPSync",
 		"Git",
 		"GitHub Flavored Markdown Preview",
 		"Github Tools",
-		"Goto Documentation",
+		"GotoDocumentation",
 		"HTML-CSS-JS Prettify",
+		"JavaScript & NodeJS Snippets",
 		"JavaScript Patterns",
 		"MacTerminal",
 		"Package Control",
@@ -21,6 +26,7 @@
 		"PHPUnit Completions",
 		"Pretty JSON",
 		"Puppet",
+		"Python Auto-Complete",
 		"Shell Turtlestein",
 		"SideBarGit",
 		"SublimeLinter",

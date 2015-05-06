@@ -3,8 +3,14 @@
 	"ignored_packages":
 	[
 		"Vintage",
+		"Sublimerge Pro",
+		"SnappiTi.sublime",
+		"Titanium API Document",
+		"MacTerminal",
+		"FTPSync",
 		"Phpcs",
-		"FTPSync"
+		"TernJS",
+		"Titanium Build"
 	],
 	"show_full_path": true
 }
