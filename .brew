@@ -29,6 +29,7 @@ brew install php55
 #brew install homebrew/dupes/screen
 
 # Install other useful binaries
+brew install ngrep
 brew install ccat
 brew install ack
 #brew install exiv2
