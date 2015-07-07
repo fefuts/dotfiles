@@ -51,6 +51,8 @@ brew install sshuttle
 brew install autojump
 #brew install tor
 brew install q
+brew install docker
+brew install boot2docker
 
 # Install native apps
 brew tap phinze/homebrew-cask
