@@ -21,6 +21,9 @@ shopt -s nocaseglob;
 # Append to the Bash history file, rather than overwriting it
 shopt -s histappend;
 
+# If set, and readline is being used, a user is given the opportunity to re-edit a failed history substitution.
+shopt -s histreedit;
+
 # Autocorrect typos in path names when using `cd`
 shopt -s cdspell;
 

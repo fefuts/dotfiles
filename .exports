@@ -10,7 +10,14 @@ NODE_REPL_HISTORY_SIZE='32768';
 export HISTSIZE='32768';
 export HISTFILESIZE="${HISTSIZE}";
 # Omit duplicates and commands that begin with a space from history.
-export HISTCONTROL='ignoreboth';
+export HISTCONTROL='ignoreboth:erasedups';
+
+# add this configuration to ~/.bashrc
+export HH_CONFIG=rawhistory,hicolor         # get more colors
+export HISTSIZE=${HISTFILESIZE}  # increase history size (default is 500)
+export PROMPT_COMMAND="history -a; ${PROMPT_COMMAND}"   # mem/file sync
+# if this is interactive shell, then bind hh to Ctrl-r
+if [[ $- =~ .*i.* ]]; then bind '"\C-r": "\C-a hh \C-j"'; fi
 
 # Prefer US English and use UTF-8.
 export LANG='en_US.UTF-8';
@@ -26,16 +33,6 @@ export MANPAGER='less -X';
 export HOMEBREW_CASK_OPTS="--appdir=/Applications";
 
 export DOCKER_HOST=tcp://localhost:2375
-
-# add this configuration to ~/.bashrc
-export HH_CONFIG=hicolor         # get more colors
-shopt -s histappend              # append new history items to .bash_history
-export HISTCONTROL=ignorespace   # leading space hides commands from history
-export HISTFILESIZE=10000        # increase history file size (default is 500)
-export HISTSIZE=${HISTFILESIZE}  # increase history size (default is 500)
-export PROMPT_COMMAND="history -a; history -n; ${PROMPT_COMMAND}"   # mem/file sync
-# if this is interactive shell, then bind hh to Ctrl-r
-if [[ $- =~ .*i.* ]]; then bind '"\C-r": "\C-a hh \C-j"'; fi
 
 # Always enable colored `grep` output.
 export GREP_OPTIONS='--color=auto';
