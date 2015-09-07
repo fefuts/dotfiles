@@ -4,7 +4,7 @@
 
 # set default SSH server:
 #   user@hostname or a host in ~/.ssh/config
-TNL_SERVER=default_ssh
+TNL_SERVER=hubot.thegoneapp.com
 
 # tunnel all traffic including DNS
 alias tnl="sshuttle --dns -vr $TNL_SERVER 0/0"
