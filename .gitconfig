@@ -173,6 +173,6 @@ protocol = https
 [credential]
 helper = /opt/boxen/bin/boxen-git-credential
 [user]
-	email = inakiabt@gmail.com
-	name = Iñaki Abete
+	email = federico@thegoneapp.com
+	name = Federico Freire
 	insteadOf = "gist:"
