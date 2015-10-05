@@ -67,7 +67,7 @@ which grunt > /dev/null && eval "$(grunt --completion=bash)"
 
 [ -f /opt/boxen/env.sh ] && source /opt/boxen/env.sh
 
-source ~/profile.d/*
+# source ~/profile.d/*
 
 export PATH=/opt/boxen/nvm/v0.8.8/bin/:$PATH
 
@@ -80,4 +80,4 @@ fi
 
 [ -f ~/bin/bashmarks/bashmarks.sh ] && source ~/bin/bashmarks/bashmarks.sh
 
-source /opt/boxen/homebrew/opt/autoenv/activate.sh
+# source /opt/boxen/homebrew/opt/autoenv/activate.sh
