@@ -81,7 +81,7 @@
 [core]
 
 	# Use custom `.gitignore` and `.gitattributes`
-	excludesfile = /opt/boxen/config/git/gitignore
+	excludesfile = ~/.gitignore
 	attributesfile = ~/.gitattributes
 	autocrlf = false
 	# Treat spaces before tabs and all kinds of trailing whitespace as an error
