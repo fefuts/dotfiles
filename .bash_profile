@@ -70,6 +70,7 @@ which grunt > /dev/null && eval "$(grunt --completion=bash)"
 # source ~/profile.d/*
 
 export PATH=/opt/boxen/nvm/v0.8.8/bin/:$PATH
+export NODE_PATH=$(npm root -g)
 
 # If possible, add tab completion for many more commands
 if [ -f $(brew --prefix)/etc/bash_completion ]; then
