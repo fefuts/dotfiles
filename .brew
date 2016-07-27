@@ -21,8 +21,6 @@ brew install wget --enable-iri
 brew tap homebrew/dupes
 brew tap jingweno/ccat
 brew install homebrew/dupes/grep
-brew tap josegonzalez/homebrew-php
-brew install php55
 
 # These two formulae didn’t work well last time I tried them:
 #brew install homebrew/dupes/vim
@@ -36,7 +34,6 @@ brew install ack
 brew install git
 brew install git-flow
 #brew install imagemagick
-brew install lynx
 brew install node
 brew install pigz
 brew install rename
@@ -51,25 +48,24 @@ brew install sshuttle
 brew install autojump
 #brew install tor
 brew install q
-brew install docker
-brew install boot2docker
+
+# Install Docker
+# brew install docker
+# brew install boot2docker
 
 # Install native apps
 brew tap phinze/homebrew-cask
 brew install brew-cask
 
+
 function installcask() {
 	brew cask install "${@}" 2> /dev/null
 }
 
-installcask dropbox
 installcask google-chrome
 installcask imagealpha
 installcask imageoptim
 installcask iterm2
-installcask sublime-text
-installcask the-unarchiver
-installcask transmission
 installcask virtualbox
 installcask vlc
 
@@ -80,10 +76,14 @@ installcask qlmarkdown
 installcask quicklook-json
 installcask qlprettypatch
 installcask quicklook-csv
+installcask betterzip
 installcask betterzipql
 installcask webp-quicklook
 installcask suspicious-package
 qlmanage -r
+
+brew tap caskroom/versions
+installcask sublime-text3
 
 # Remove outdated versions from the cellar
 brew cleanup
