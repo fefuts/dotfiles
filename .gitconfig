@@ -1,5 +1,6 @@
 [alias]
 
+    sl = "!f() { git log --pretty=oneline -n 20 --graph --abbrev-commit --color --no-merges | emojify ;}; f"
 	# View abbreviated SHA, description, and history graph of the latest 20 commits
 	l = log --pretty=oneline -n 20 --graph --abbrev-commit
 
@@ -18,6 +19,9 @@
 	# Clone a repository including all submodules
 	c = clone --recursive
 
+    # Merge avoiding fast forwarding
+    mnff = merge --no-ff
+
 	# Commit all changes
 	ca = !git add -A && git commit -av
 
@@ -26,6 +30,7 @@
 
 	# Switch to a branch, creating it if necessary
 	go = "!f() { git checkout -b \"$1\" 2> /dev/null || git checkout \"$1\"; }; f"
+	go = "!f() {git checkout -b \"$1\" 2> /dev/null || git checkout \"$1\"; }; f"
 
 	# Show verbose output about tags, branches or remotes
 	tags = tag -l
@@ -75,6 +80,10 @@
 			git commit --amend -m \"$(git log -1 --pretty=%B)\n\nCloses #$1.\"; \
 		fi \
 	}; f"
+	ll = "!f() { git log --graph; }; f"
+
+    # stash only files out of stage
+    stashun = "stash --keep-index -u"
 
 [apply]
 
@@ -178,4 +187,8 @@ helper = /opt/boxen/bin/boxen-git-credential
 [user]
 	email = federico@thegoneapp.com
 	name = Federico Freire
-	insteadOf = "gist:"
+	insteadOf = "gist:"	insteadOf = "gist:"
+[filter "lfs"]
+	smudge = git-lfs smudge %f
+	required = true
+	clean = git-lfs clean %f
