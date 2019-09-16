@@ -1,0 +1,3 @@
+mkdir -p $HOME/.ssh
+chmod 700 $HOME/.ssh
+cp ./ssh.cfg $HOME/.ssh/config
