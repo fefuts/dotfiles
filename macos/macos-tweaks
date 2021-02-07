@@ -25,6 +25,11 @@ defaults write com.apple.dock show-process-indicators -bool true
 # the Dock to launch apps.
 defaults write com.apple.dock persistent-apps -array
 
+# Mojave: remove recent applications and do not show them
+defaults write com.apple.dock show-recents -bool no
+defaults write com.apple.dock recent-apps -array
+
+
 # Don’t animate opening applications from the Dock
 defaults write com.apple.dock launchanim -bool false
 
@@ -72,6 +77,6 @@ find "${HOME}/Library/Application Support/Dock" -name "*-*.db" -maxdepth 1 -dele
 # 12: Notification Center
 # 13: Lock screen
 
-defaults write com.apple.dock wvous-tr-corner -int 13
-defaults write com.apple.dock wvous-tr-modifier -int 0
+# defaults write com.apple.dock wvous-tr-corner -int 13
+# defaults write com.apple.dock wvous-tr-modifier -int 0
 

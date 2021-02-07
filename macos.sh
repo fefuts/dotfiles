@@ -9,21 +9,20 @@ while true; do sudo -n true; sleep 60; kill -0 "$$" || exit; done 2>/dev/null &
 
 
 # Copy all files that go to home folder
-cp ./macos/home-files/* $HOME/
+cp -R ./macos/home-files/ $HOME/
 
 # Run configs
 source macos/ssh
 source macos/transmission
 source macos/time-machine
 source macos/terminal
-source macos/ssd
-source macos/spotlight
+# source macos/spotlight
 source macos/screen
 source macos/safari
 source macos/peripherals
 source macos/mail
 source macos/macos-tweaks
-source macos/google-chrome
+# source macos/google-chrome
 source macos/general
 source macos/finder
 source macos/apple-apps

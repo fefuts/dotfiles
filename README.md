@@ -22,4 +22,4 @@
 ```
   chmod +x macos.sh && ./macos.sh
 ```
-5. Finish manual settings
+
